@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>David Pan</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="javascript.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6dc306e9cd.js" crossorigin="anonymous"></script>
+    <style>
+        .header-text {
+            font-family: 'Roboto Mono', monospace;
+            overflow: hidden;  /* Hides text as it is being "typed" */
+            white-space: nowrap;  /* Prevents text from wrapping */
+            border-right: 3px solid white;  /* Simulates a blinking cursor */
+            width: 0;  /* Start with no visible text */
+            animation: typing 2.25s steps(36, end) 1s forwards, blink 1.25s step-end infinite;  /* Typing effect and infinite cursor blink */
+        }
+
+        /* Keyframes for typing effect */
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 36ch;  /* End when the full text is typed out */
+            }
+        }
+
+        /* Keyframes for cursor blinking */
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+            100% {
+                border-color: white;  /* Cursor stays visible and blinks */
+            }
+        }
+        @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px); /* Move up slightly */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+    </style>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <h1>Hi, I'm <span>David Pan.</span></h1>
+        </div>
+    </div>
+</div>
+<!--------about--------->
+
+<div id="about">
+    <div class="container fade-in">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>
+                    Hi! I am a first-year Software Engineering student at
+                    the University of Waterloo. I am
+                    passionate about programming, software development, 
+                    and robotics. As a dedicated software engineer-in-progress,
+                     I am constantly seeking to expand my skills and knowledge. 
+                     Whether through coursework, personal projects, or hands-on 
+                     experiences, I strive to stay at the forefront of technological 
+                     advancements. My journey is driven by a
+                      passion for creating impactful solutions, and I am eager to apply 
+                      my skills to tackle complex challenges. Beyond academics, I enjoy playing sports such
+                       as badminton, volleyball,
+                    and basketball, and cooking and playing video games.
+                </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <span>Languages</span><br>
+                    <ul>
+                        <li>Python</li>
+                        <li>C++</li>
+                        <li>HTML & CSS</li>
+                        <li>Javascript</li>
+                    </ul> 
+                    <span>Frameworks/Tools</span><br>
+                    <ul>
+                        <li>React</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <!-- <li><span>Time</span><br>Internship</li> -->
+                        <li><span>2021-2024</span><br>Program Director at Coding Pals</li>
+                        <li><span>2022-2024</span><br>Assistant Instructor at Kumon</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2024-2029</span><br>Software Engineering at University of Waterloo</li>
+                        <li><span>2021-2024</span><br>High School Diploma & IB Certificates at Lillian Osborne High School</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!---------------Portfolio --------------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work1.png">
+                <div class="layer">
+                    <h3>Crypto Market Tracker</h3>
+                    <p>CryptoLens is a dynamic cryptocurrency tracker designed to provide real-time information on the cryptocurrency market. Users can easily monitor the latest prices, track market trends, and explore historical data to analyze price movements over time. With features like live price updates, market capitalization, 24-hour highs and lows, and performance charts, CryptoLens empowers users to stay informed and make data-driven decisions in the fast-paced world of cryptocurrency.
+                    </p>
+                    <a href="https://cryptolensdev.netlify.app/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/coming-soon.jpeg">
+                <div class="layer">
+                    <h3>Project</h3>
+                    <p>Coming soon...</p>
+                    <!-- <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> -->
+                </div>
+            </div>
+            
+        </div>
+        <!-- <a href="#" class="btn">See more</a>   button for see more  -->
+    </div>
+</div>
+<!-- ------------------contact------------- -->
+ <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>d33pan@uwaterloo.ca</p>
+                <p><i class="fa-solid fa-square-phone"></i>5877833221</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/davidpan1/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/ddaweipan/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://github.com/dawei9982"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>©2024 David Pan | All Rights Reserved</p>
+    </div>
+ </div>
+
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwuVt_mnq03x-uyV-Ydgw2LtbMfB6r2TiT-gPIU5dHW3s6XTY4nVGE4zFg9g7drJYI4bQ/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
